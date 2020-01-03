@@ -24,6 +24,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
 
+  # Adds HTTP: https://flutter.dev/docs/cookbook/networking/fetch-data
+  http: "^0.12.0+3"
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
