@@ -1,6 +1,6 @@
-# paaske_tid_2020
+# Påske Tid 2020
 
-Klokke for paaskeleiren 2020
+Klokkeapp for Påskeleiren i Trøndelag våren 2020
 
 ## Getting Started
 
