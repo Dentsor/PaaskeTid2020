@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() => runApp(new PaaskeTidApp());
 
@@ -10,10 +11,15 @@ class PaaskeTidApp extends StatefulWidget {
 }
 
 class PaaskeTidState extends State<PaaskeTidApp> {
-  var _isLoading = true;
 
   @override
   Widget build(BuildContext context) {
+
+    Random rng = new Random();
+    String path = 'assets/backgrounds/'
+        + rng.nextInt(29).toString().padLeft(2, '0')
+        +'.jpg';
+
     return new MaterialApp(
       home: new Scaffold(
         appBar: new AppBar(
@@ -23,14 +29,20 @@ class PaaskeTidState extends State<PaaskeTidApp> {
                 icon: new Icon(Icons.refresh),
                 onPressed: () {
                   print("Reloading...");
-                  setState(() {
-                    _isLoading = !_isLoading;
-                  });
+                  setState(() {});
                 })
           ],
         ),
-        body: new Center(
-          child: _isLoading ? new CircularProgressIndicator() : new ClockView(),
+        body: new Container(
+          decoration: new BoxDecoration(
+            image: new DecorationImage(
+              image: AssetImage(path),
+              fit: BoxFit.cover
+            )
+          ),
+          child: new Center(
+            child: new ClockView(),
+          ),
         ),
       ),
     );
@@ -40,15 +52,15 @@ class PaaskeTidState extends State<PaaskeTidApp> {
 class ClockView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var baseTime = new DateTime(2020, 01, 4);
-    var startTime = new DateTime(2020, 01, 4, 2);
-    var endTime = new DateTime(2020, 01, 05, 0);
+    var baseTime = new DateTime(2020, 1, 6);
+    var startTime = new DateTime(2020, 1, 5, 10);
+    var endTime = new DateTime(2020, 1, 20, 0);
     
     var baseTime2 = new DateTime(2020, 4, 4, 0);
     var startTime2 = new DateTime(2020, 4, 4, 10);
     var endTime2 = new DateTime(2020, 4, 8, 14);
 
-    //baseTime = baseTime2; startTime = startTime2; endTime = endTime2;
+    baseTime = baseTime2; startTime = startTime2; endTime = endTime2;
     
     final time = new DateTime.now();
 
