@@ -127,6 +127,7 @@ class _ClockState extends State<ClockView> {
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.w300,
+                  color: Colors.black,
                 ))));
   }
 }
