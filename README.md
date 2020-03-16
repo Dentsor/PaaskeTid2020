@@ -1,16 +1,16 @@
 # Påske Tid 2020
 
-Klokkeapp for Påskeleiren i Trøndelag våren 2020
+Klokkeapp for Roverpåskeleiren i Trøndelag våren 2020.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Hva?
 
-A few resources to get you started if this is your first Flutter project:
+Dette er en cross-platform app for både iOS og Android som viser hva klokken er i leirtid under påskeleiren i Trøndelag 2020.
+Leiren har tema "Døgnvill" og leirdøgnet er derfor forskjøvet fra 24 til 36 timer.
+Denne appen gjør det lettere å henge med i programmet, uansett hvor forvirrende timeplanen kan se ut.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Credits
+
+Alle bakgrunnsbilder som finnes i appen er hentet fra [Pixabay.com](https://pixabay.com/).
+Lenke til brukerne vi har hentet bilder fra ligger i Credits.txt
