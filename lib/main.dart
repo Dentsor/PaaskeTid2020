@@ -5,15 +5,8 @@ import 'dart:async';
 void main() => runApp(new PaaskeTidApp());
 
 class PaaskeTidApp extends StatefulWidget {
-
   @override
   State<StatefulWidget> createState() => PaaskeTidState();
-  /*
-  @override
-  State<StatefulWidget> createState() {
-    return new PaaskeTidState();
-  }
-   */
 }
 
 class PaaskeTidState extends State<PaaskeTidApp> {
@@ -41,8 +34,6 @@ class PaaskeTidState extends State<PaaskeTidApp> {
         + img.toString().padLeft(2, '0')
         +'.jpg';
 
-    // print(path);
-
     return new Container(
           decoration: new BoxDecoration(
           image: new DecorationImage(
@@ -54,34 +45,6 @@ class PaaskeTidState extends State<PaaskeTidApp> {
         child: new ClockView(),
       )
     );
-
-    /*
-    return new MaterialApp(
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text("Tid for Påske"),
-          actions: <Widget>[
-            new IconButton(
-                icon: new Icon(Icons.refresh),
-                onPressed: () {
-                  setState(() {});
-                })
-          ],
-        ),
-        body: new Container(
-          decoration: new BoxDecoration(
-            image: new DecorationImage(
-              image: AssetImage(path),
-              fit: BoxFit.cover
-            )
-          ),
-          child: new Center(
-            child: new ClockView(),
-          ),
-        ),
-      ),
-    );
-     */
   }
 }
 
@@ -122,12 +85,6 @@ class _ClockState extends State<ClockView> {
     var startTime = new DateTime(2020, 4, 4, 10);
     var endTime = new DateTime(2020, 4, 8, 14);
 
-    var baseTime2 = new DateTime(2020, 3, 9);
-    var startTime2 = new DateTime(2020, 3, 10, 10);
-    var endTime2 = new DateTime(2020, 3, 16, 0);
-
-    baseTime = baseTime2; startTime = startTime2; endTime = endTime2;
-
     // Check if startTime hasn't passed
     if (startTime.difference(time).inMilliseconds > 0) {
       final diff = startTime.difference(time);
@@ -154,24 +111,22 @@ class _ClockState extends State<ClockView> {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: GestureDetector(
-            onTap: () {},
-            child: Container(
-                decoration: new BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  color: Color.fromRGBO(255, 255, 255, 80),
-                ),
-                padding: EdgeInsets.all(50),
-                child: Text(_displayString,
-                    textDirection: TextDirection.ltr,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w300,
-                    )))));
+        child: Container(
+            decoration: new BoxDecoration(
+                shape: BoxShape.rectangle,
+                color: Color.fromRGBO(255, 255, 255, 80),
+            ),
+            padding: EdgeInsets.all(50),
+            child: Text(
+                _displayString,
+                textDirection: TextDirection.ltr,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w300,
+                ))));
   }
 }
